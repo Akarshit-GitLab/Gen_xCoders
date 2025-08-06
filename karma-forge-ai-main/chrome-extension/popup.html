@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HabitForge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <h1>HabitForge</h1>
+      </div>
+      <div class="karma-badge" id="karmaScore">
+        <span class="karma-value">0</span>
+        <span class="karma-label">karma</span>
+      </div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-content">
+          <div class="stat-value" id="activeTime">0m</div>
+          <div class="stat-label">Active Time</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-content">
+          <div class="stat-value" id="tabSwitches">0</div>
+          <div class="stat-label">Tab Switches</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">😴</div>
+        <div class="stat-content">
+          <div class="stat-value" id="idleTime">0m</div>
+          <div class="stat-label">Idle Time</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-content">
+          <div class="stat-value" id="streak">0</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-progress">
+      <div class="level-info">
+        <span class="current-level" id="currentLevel">Beginner</span>
+        <span class="next-level" id="nextLevel">Mindful</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div class="top-sites" id="topSites">
+      <h3>Top Sites Today</h3>
+      <div class="sites-list" id="sitesList">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary" id="openDashboard">
+        Open Dashboard
+      </button>
+      <button class="btn-secondary" id="syncNow">
+        Sync Now
+      </button>
+    </div>
+
+    <div class="auth-section" id="authSection" style="display: none;">
+      <p>Connect to your HabitForge account to sync data</p>
+      <button class="btn-primary" id="loginBtn">
+        Login to HabitForge
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

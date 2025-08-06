@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "HabitForge - Digital Wellness Tracker",
+  "version": "1.0.0",
+  "description": "Track your digital habits and build better online behavior with karma scoring",
+  
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "idle",
+    "background"
+  ],
+  
+  "host_permissions": [
+    "https://fca1c54b-5da5-4930-b1fd-0068a195564d.Gen_xCodersproject.com/*",
+    "https://mlwspxbxvqqqwrbjhujp.supabase.co/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HabitForge Karma",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
